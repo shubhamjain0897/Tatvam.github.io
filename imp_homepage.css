@@ -1,0 +1,86 @@
+body{
+  background-image: url("mountain.jpg");
+}
+
+.fa{
+  color: #212121;
+  text-decoration: none;
+  font-size: 25px;
+  padding: 10px;
+}
+.container_2{
+display: flex;
+flex-wrap: nowrap;
+justify-content: center;
+background-color: #ffffff;
+background: transparent;
+overflow-x: hidden;
+padding-top: 0px;
+font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+.container1{
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 0px;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+#main #get_list{
+  position: fixed;
+  top: 0px;
+  left: 5px;
+}
+.force-to-bottom{
+  padding-left: 60px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  position:absolute;
+ bottom: 5%;
+ width: 100%;
+}
+.force-to-bottom > div{
+   width: 100px;
+}
+.force-to-middle{
+  display: grid;
+  justify-content: center;
+  position:absolute;
+
+ bottom: 30%;
+ width: 100%;
+}
+.force-to-middle .mid{
+  text-align: center;
+}
+.force-to-middle .mid1{
+  text-align: center;
+    padding-bottom: 50px;
+}
+.cont a{
+  opacity: 1.0;
+  text-decoration: none;
+  font-size: 25px;
+  color: #212121;
+  display: block;
+  transition: 0.3s;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+#main{
+  transition: margin-left .5s;
+  padding: 16px;
+}
+.cont .clbn {
+  font-size: 36px;
+}
+
+h1,p{
+font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+font-size: 50px;
+font-weight: lighter;
+}
+p{
+margin-top: 50px;
+}

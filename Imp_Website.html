@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="imp_homepage.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Tatvam Dadheech
+  </title>
+</head>
+
+<style>
+  @media only screen and (max-width: 768px) {
+     .container_2{
+       display: grid;
+      opacity: 1.0;
+      background-color: #ffffff;
+      width: 0px;
+    }
+  #main  #get_list{
+      visibility: visible;
+    }
+  }
+  @media only screen and (max-height: 432px){
+    .force-to-middle{
+      position: sticky;
+    }
+    .force-to-bottom div a{
+        position: sticky;
+    }
+  }
+  </style>
+<body>
+
+<div id="sidemenu" class="container_2 cont" >
+    <!--  <div class="row-sm-1" style="visibility: hidden"><a href="Javascript:void(0)" class="clbn" onclick="closebar()">&times;</a></div> -->
+        <div style="flex-grow: 2 ;text-align:center"><a href="#">About Me</a></div>
+        <div style="flex-grow: 2 ;text-align:center"><a href="#">Projects</a></div>
+        <div style="flex-grow: 4 ;text-align:center"><a href="#">Resume</a></div>
+        <div style="flex-grow: 2;text-align:center"><a href="#">Blog</a></div>
+</div>
+</div>
+<div id="main"class="force-to-middle">
+<span id="get_list" style="font-size:30px;cursor:pointer;font-weight: bold; visibility: hidden; position:fixed; top: 0px; left: 5px " onclick="openmenu() ">&#9776;</span>
+<div class="mid"><h1>  Welcome  </h1></div>
+<div class="mid1"><p>  I am Tatvam Dadheech</p></div>
+</div>
+<div class="force-to-bottom ">
+  <div><a href="#" > <i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+  <div><a href="#" > <i class="fa fa-github" aria-hidden="true"></i></a></div>
+  <div><a href="#" > <i class="fa fa-steam" aria-hidden="true"></i></a></div>
+  <div><a href="#" > <i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+  <div><a href="#" > <i class="fa fa-skype" aria-hidden="true"></i></a></div>
+  <div><a href="#" > <i class="fa fa-quora" aria-hidden="true"></i></a></div>
+</div>
+</div>
+<script src="script1.js"> </script>
+</body>
+</html>
