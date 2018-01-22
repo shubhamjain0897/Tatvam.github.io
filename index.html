@@ -11,32 +11,18 @@
     Tatvam Dadheech
   </title>
 </head>
-
-<style>
-  @media only screen and (max-width: 768px) {
-     .container_2{
-       display: grid;
-      opacity: 1.0;
-      background-color: #ffffff;
-      width: 0px;
-    }
-  #main  #get_list{
-      visibility: visible;
-    }
-  }
-  @media only screen and (max-height: 432px){
-    .force-to-middle{
-      position: sticky;
-    }
-    .force-to-bottom div a{
-        position: sticky;
-    }
-  }
-  </style>
 <body>
-
+  <div id="sidemenu1" class="container_21 cont1" >
+    <div style="visibility: visible"><a href="Javascript:void(0)" class="clbn" onclick="closebar()">&times;</a></div> 
+    <div class="closeit">
+        <div><a href="#">About Me</a></div>
+        <div><a href="#">Projects</a></div>
+        <div><a href="#">Resume</a></div>
+        <div><a href="#">Blog</a></div>
+    </div>
+</div>
 <div id="sidemenu" class="container_2 cont" >
-    <!--  <div class="row-sm-1" style="visibility: hidden"><a href="Javascript:void(0)" class="clbn" onclick="closebar()">&times;</a></div> -->
+    <div class="row-sm-1" style="visibility: hidden"><a href="Javascript:void(0)" class="clbn" onclick="closebar()">&times;</a></div> 
         <div style="flex-grow: 2 ;text-align:center"><a href="#">About Me</a></div>
         <div style="flex-grow: 2 ;text-align:center"><a href="#">Projects</a></div>
         <div style="flex-grow: 4 ;text-align:center"><a href="#">Resume</a></div>
@@ -44,7 +30,7 @@
 </div>
 </div>
 <div id="main"class="force-to-middle">
-<span id="get_list" style="font-size:30px;cursor:pointer;font-weight: bold; visibility: hidden; position:fixed; top: 0px; left: 5px " onclick="openmenu() ">&#9776;</span>
+<span id="get_list" onclick="openmenu() ">&#9776;</span>
 <div class="mid"><h1>  Welcome  </h1></div>
 <div class="mid1"><p>  I am Tatvam Dadheech</p></div>
 </div>

@@ -1,3 +1,4 @@
+
 body{
   background-image: url("mountain.jpg");
 }
@@ -18,17 +19,28 @@ overflow-x: hidden;
 padding-top: 0px;
 font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
-.container1{
-  position: absolute;
-  height: 100%;
-  width: 30%;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 0px;
-  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-}
-#main #get_list{
+.container_21{
+  display: grid;
+  padding-bottom: 15px;
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+  justify-content: center;
+  background: turquoise;
+  background-color: white;
   position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  padding-top: 0px;
+  transition: 0.5s;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  }
+.force-to-middle > span{
+  font-size:30px;
+  cursor:pointer;
+  font-weight: bold;
+  visibility: hidden;
+  position:fixed;
   top: 0px;
   left: 5px;
 }
@@ -68,11 +80,27 @@ font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   transition: 0.3s;
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
+.closeit a{
+  opacity: 1.0;
+  text-decoration: none;
+  font-size: 25px;
+  color: #212121;
+  display: block;
+  position: relative;
+  padding-bottom: 50px;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  transition: 0.5s;
+}
 #main{
   transition: margin-left .5s;
   padding: 16px;
 }
-.cont .clbn {
+.cont1 .clbn {
+  padding-bottom: 5px;
+  font-size: 25px;
+  margin-left: 100px;
+  color: #212121;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   font-size: 36px;
 }
 
@@ -83,4 +111,21 @@ font-weight: lighter;
 }
 p{
 margin-top: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .container_2{
+   visibility: hidden;
+ }
+.force-to-middle > span{
+   visibility: visible;
+ }
+ 
+}
+@media only screen and (max-height: 432px){
+ .force-to-middle{
+   position: sticky;
+ }
+ .force-to-bottom div a{
+     position: sticky;
+ }
 }
