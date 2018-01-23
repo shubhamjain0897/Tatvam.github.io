@@ -1,6 +1,6 @@
 
 body{
-  background: url("mountain.jpg") no-repeat center center fixed;
+  background: url("Gray.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -8,7 +8,7 @@ body{
         height: auto;
 }
 .fa{
-  color: #212121;
+  color: #ffffff;
   text-decoration: none;
   font-size: 25px;
   padding: 10px;
@@ -39,6 +39,7 @@ font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   }
 .force-to-middle > span{
   font-size:30px;
+  color: #ffffff;
   cursor:pointer;
   font-weight: bold;
   visibility: hidden;
@@ -69,12 +70,13 @@ font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 .force-to-middle .mid1{
   text-align: center;
+  color: #ffffff;
 }
 .cont a{
   opacity: 1.0;
   text-decoration: none;
   font-size: 25px;
-  color: #212121;
+  color: #ffffff;
   display: block;
   transition: 0.3s;
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
