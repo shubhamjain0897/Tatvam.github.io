@@ -1,4 +1,26 @@
 
+var  data=["Welcome",
+            "I am Tatvam Dadheech",
+             "Sophomore at IIT Bhubaneswar",
+             "I am a CSE undergrad",
+             "I am a Gamer",
+            "I am an Introvert",
+          ];
+var i=0;
+$(document).ready(function(){
+ function myRepeat(){
+      $("p").empty();
+      $("p").append(data[i%data.length]);
+      $("p").delay(150).fadeIn(1000).delay(150).fadeOut(1000); 
+      i++;
+      if(i==data.length){
+        i=0;
+    }
+  }
+  setInterval(myRepeat,2500);  
+});
+
+
 var height1=window.screen.availHeight+"px";
 function openmenu(){
   //document.getElementById("sidemenu1").style.display="grid";
@@ -37,7 +59,7 @@ $(window).resize(function() {
     document.getElementById("get_list").style.visibility="hidden";
     document.getElementById("sidemenu1").style.width="0px";
     document.getElementById("sidemenu1").style.height="0px";
-  }
+}
   else{
     if(document.getElementById("sidemenu1").style.visibility=="hidden"){
       document.getElementById("get_list").style.visibility="visible";
