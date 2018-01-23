@@ -10,14 +10,15 @@ var i=0;
 $(document).ready(function(){
  function myRepeat(){
       $("p").empty();
+      $("p").delay(150);
       $("p").append(data[i%data.length]);
-      $("p").delay(150).fadeIn(1000).delay(150).fadeOut(1000); 
+      $("p").fadeIn(1000).delay(150).fadeOut(1000); 
       i++;
       if(i==data.length){
         i=0;
     }
   }
-  setInterval(myRepeat,2500);  
+  setInterval(myRepeat,3000);  
 });
 
 

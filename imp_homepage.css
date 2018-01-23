@@ -57,16 +57,16 @@ font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
    width: 100px;
 }
 .force-to-middle{
-  display: grid;
+  display: flex;
   justify-content: center;
+  flex-wrap: nowrap;
   position:absolute;
-
- bottom: 30%;
  width: 100%;
+ bottom: 40%;
+
 }
 .force-to-middle .mid1{
   text-align: center;
-    padding-bottom: 150px;
 }
 .cont a{
   opacity: 1.0;
