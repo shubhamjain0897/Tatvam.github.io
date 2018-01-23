@@ -5,6 +5,7 @@ body{
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        height: auto;
 }
 .fa{
   color: #212121;
@@ -63,7 +64,7 @@ font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   flex-wrap: nowrap;
   position:absolute;
  width: 100%;
- bottom: 40%;
+ bottom: 50%;
 
 }
 .force-to-middle .mid1{
