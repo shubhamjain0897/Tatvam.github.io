@@ -4,7 +4,6 @@ var  data=["Welcome",
              "Sophomore at IIT Bhubaneswar",
              "I am a CSE undergrad",
              "I am a Gamer",
-            "I am an Introvert",
           ];
 var i=0;
 $(document).ready(function(){
