@@ -66,6 +66,7 @@ font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 .force-to-middle .mid1{
   text-align: center;
+  font-weight: bold;
   color: #ffffff;
 }
 .cont a{
@@ -84,7 +85,7 @@ font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   opacity: 1.0;
   text-decoration: none;
   font-size: 25px;
-  color: #212121;
+  color: #000080;
   display: block;
   position: relative;
   padding-bottom: 50px;
@@ -101,7 +102,8 @@ font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 .cont1 .clbn {
   font-size: 25px;
   margin-left: 100px;
-  color: #212121;
+  font-weight: bold;
+  color:#000080;
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   font-size: 36px;
 }
