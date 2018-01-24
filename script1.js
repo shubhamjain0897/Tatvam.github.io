@@ -10,7 +10,7 @@ $(document).ready(function(){
  function myRepeat(){
       $("p").empty();
       $("p").append(data[i%data.length]);
-      $("p").delay(150).fadeIn(1000).delay(150).fadeOut(1000); 
+      $("p").fadeIn(1000).delay(150).fadeOut(1000); 
       i++;
       if(i==data.length){
         i=0;
