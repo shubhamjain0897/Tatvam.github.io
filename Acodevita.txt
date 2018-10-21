@@ -1,0 +1,145 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+#define ios ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+#define ll long long
+
+#define s(args...); { scan(args); }
+#define sd(args...); ll args; s(args);
+void scan() {}
+template<typename T, typename... Args>
+void scan(T& a, Args&... args) {
+   scanf("%lld", &a);
+   scan(args...);
+}
+
+#define rep(i, begin, end) for (__typeof(end) i = (begin) - ((begin) > (end)); i != (end) - ((begin) > (end)); i += 1 - 2 * ((begin) > (end)))
+#define reps(i, a, s) for(i = a; s[i] != '\0'; i++)
+#define ss(s) scanf("%s", s);
+#define test(a) ll T; s(T); rep(a, 1, T + 1)
+#define pi(a) printf("%lld ", a);
+#define pin(a); printf("%lld\n", a);
+#define pin2(a, b) printf("%lld %lld\n", a, b);
+#define ps(s) printf("%s", s);
+#define sarr(a, n) ll *a = (ll *)malloc(sizeof(ll) * (n + 2)); rep(i, 0, n) { s(a[i]); }
+#define pvec(vec) for(auto i : vec) cout << i << " \n"[i == vec.size() - 1];
+#define nl printf("\n");
+#define all(v) v.begin(), v.end()
+#define pb push_back
+#define eb emplace_back
+#define mp make_pair
+#define sq(a) (a * a)
+#define inc_map(map, key) if (map.find(key) == map.end()) map[key] = 1; else map[key]++;
+#define get_map(map, key) (map.find(key) == map.end() ? 0 : map[key])
+#define F first
+#define S second
+#define PI 3.1415926535897932
+#define MOD 1000000007
+#define INF 1000000000007
+#define nmax 100005
+
+#define trace2(x, y)             cerr <<#x<<": "<<x<<" | "<<#y<<": "<<y<< endl;
+#define trace3(x, y, z)          cerr <<#x<<": "<<x<<" | "<<#y<<": "<<y<<" | "<<#z<<": "<<z<<endl;
+#define trace4(a, b, c, d)       cerr <<#a<<": "<<a<<" | "<<#b<<": "<<b<<" | "<<#c<<": "<<c<<" | "<<#d<<": "<<d<<endl;
+#define trace5(a, b, c, d, e)    cerr <<#a<<": "<<a<<" | "<<#b<<": "<<b<<" | "<<#c<<": "<<c<<" | "<<#d<<": "<<d<<" | "<<#e<<": "<<e<<endl;
+
+#define mid ((l + r) / 2.0)
+
+#define error(args...) { string _s = #args; replace(_s.begin(), _s.end(), ',', ' '); stringstream _ss(_s); istream_iterator<string> _it(_ss); err(_it, args); }
+void err(istream_iterator<string> it) {}
+template<typename T, typename... Args>
+void err(istream_iterator<string> it, T a, Args... args) {
+  cerr << *it << " = " << a << endl;
+  err(++it, args...);
+}
+
+ll mul_mod(ll a, ll b, ll m) {
+   long double x;
+   ll c;
+   ll r;
+   if (a >= m) a %= m;
+   if (b >= m) b %= m;
+   x = a;
+   c = x * b / m;
+   r = (ll)(a * b - c * m) % (ll)m;
+   return r < 0 ? r + m : r;
+}
+
+ll mod(ll n, ll m = MOD) {
+  n %= m;
+  while(n < 0) {
+    n += m;
+  }
+  return n;
+}
+
+ll power(ll x, unsigned long long y, ll z = MOD) {
+    ll res = 1;
+    x = mod(x, z);
+    while (y > 0) {
+        if (y & 1) res = mod(res * x, z);
+        y = y >> 1;
+        x = mod(x * x, z);  
+    }
+    return res;
+}
+
+
+
+void solve() {
+  
+    queue < pair<ll, ll> > que;
+    char s[1000], loc[1000];
+    ss(s);
+    char *token = strtok(s, ",");
+    ll n = atoi(token);
+    token = strtok(NULL, ",");
+    ll m = atoi(token);
+    token = strtok(NULL, ",");
+    ll k = atoi(token);
+    ll ans[n][m], mark[n][m], boat[n][m], x = 0, y = 0, num = 0;
+    rep(i, 0, n) {
+      rep(j, 0, m) {
+        ans[i][j] = LLONG_MAX;
+        mark[i][j] = 0;
+        boat[x][y] = LLONG_MAX;
+      }
+    }
+    rep(i, 0, k) {
+      ss(loc);
+      token = strtok(loc, ",");
+      x = atoi(token);
+      token = strtok(NULL, ",");
+      y = atoi(token);
+      que.emplace(x, y);
+      ans[x][y] = 0;
+      boat[x][y] = i;
+    }
+    ll dx[4] = {-1, 0, 1, 0};
+    ll dy[4] = {0, -1, 0, 1};
+    while(!que.empty()) {
+      tie(x, y) = que.front();
+      que.pop();
+      rep(i, 0, 4) {
+        if (x + dx[i] >= 0 && x + dx[i] <= n - 1 && y + dy[i] >= 0 && y + dy[i] <= m - 1) {
+          if (ans[x + dx[i]][y + dy[i]] == ans[x][y] + 1 && boat[x][y] != boat[x + dx[i]][y + dy[i]]) {
+            mark[x + dx[i]][y + dy[i]] = 1;
+          } else if (ans[x + dx[i]][y + dy[i]] > ans[x][y] + 1) {
+            que.emplace(x + dx[i], y + dy[i]);
+            ans[x + dx[i]][y + dy[i]] = ans[x][y] + 1;
+            boat[x + dx[i]][y + dy[i]] = boat[x][y];
+          }
+        }
+      }
+    }
+    rep(i, 0, n) rep(j, 0, m) if (mark[i][j]) num++;
+    pin(num);
+}
+
+int main() {
+ 
+  solve();
+  return 0;
+}
