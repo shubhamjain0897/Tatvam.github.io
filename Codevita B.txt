@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+int n;
+cin>>n;
+int a[]={2,3,5,7,11,13,17,19};
+int j=0;
+int cnt = 0;
+while(j!=8){
+if(a[j]<=n){
+if(n%a[j]==0){
+cnt++;
+	}
+}
+  else{
+	break;
+}
+j++;
+}
+cout<<pow(2,cnt)-1;
+}
